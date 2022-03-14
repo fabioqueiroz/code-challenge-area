@@ -1,0 +1,16 @@
+C:\Users\fabio\OneDrive\Desktop\All Projects\C#\CodeChallengeArea\CodeChallengeArea\bin\Debug\net5.0\CodeChallengeArea.exe
+C:\Users\fabio\OneDrive\Desktop\All Projects\C#\CodeChallengeArea\CodeChallengeArea\bin\Debug\net5.0\CodeChallengeArea.deps.json
+C:\Users\fabio\OneDrive\Desktop\All Projects\C#\CodeChallengeArea\CodeChallengeArea\bin\Debug\net5.0\CodeChallengeArea.runtimeconfig.json
+C:\Users\fabio\OneDrive\Desktop\All Projects\C#\CodeChallengeArea\CodeChallengeArea\bin\Debug\net5.0\CodeChallengeArea.runtimeconfig.dev.json
+C:\Users\fabio\OneDrive\Desktop\All Projects\C#\CodeChallengeArea\CodeChallengeArea\bin\Debug\net5.0\CodeChallengeArea.dll
+C:\Users\fabio\OneDrive\Desktop\All Projects\C#\CodeChallengeArea\CodeChallengeArea\bin\Debug\net5.0\ref\CodeChallengeArea.dll
+C:\Users\fabio\OneDrive\Desktop\All Projects\C#\CodeChallengeArea\CodeChallengeArea\bin\Debug\net5.0\CodeChallengeArea.pdb
+C:\Users\fabio\OneDrive\Desktop\All Projects\C#\CodeChallengeArea\CodeChallengeArea\obj\Debug\net5.0\CodeChallengeArea.csproj.AssemblyReference.cache
+C:\Users\fabio\OneDrive\Desktop\All Projects\C#\CodeChallengeArea\CodeChallengeArea\obj\Debug\net5.0\CodeChallengeArea.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fabio\OneDrive\Desktop\All Projects\C#\CodeChallengeArea\CodeChallengeArea\obj\Debug\net5.0\CodeChallengeArea.AssemblyInfoInputs.cache
+C:\Users\fabio\OneDrive\Desktop\All Projects\C#\CodeChallengeArea\CodeChallengeArea\obj\Debug\net5.0\CodeChallengeArea.AssemblyInfo.cs
+C:\Users\fabio\OneDrive\Desktop\All Projects\C#\CodeChallengeArea\CodeChallengeArea\obj\Debug\net5.0\CodeChallengeArea.csproj.CoreCompileInputs.cache
+C:\Users\fabio\OneDrive\Desktop\All Projects\C#\CodeChallengeArea\CodeChallengeArea\obj\Debug\net5.0\CodeChallengeArea.dll
+C:\Users\fabio\OneDrive\Desktop\All Projects\C#\CodeChallengeArea\CodeChallengeArea\obj\Debug\net5.0\ref\CodeChallengeArea.dll
+C:\Users\fabio\OneDrive\Desktop\All Projects\C#\CodeChallengeArea\CodeChallengeArea\obj\Debug\net5.0\CodeChallengeArea.pdb
+C:\Users\fabio\OneDrive\Desktop\All Projects\C#\CodeChallengeArea\CodeChallengeArea\obj\Debug\net5.0\CodeChallengeArea.genruntimeconfig.cache
