@@ -45,7 +45,8 @@ namespace CodeChallengeArea
                     delimiters.Add(firstChar);
                     return delimiters;
                 }
-                var newDelimiters = matches[0].ToString().Split(new string[] { "[", "]" }, StringSplitOptions.RemoveEmptyEntries);
+
+                var newDelimiters = matches[0]?.ToString().Split(new string[] { "[", "]" }, StringSplitOptions.RemoveEmptyEntries) ?? Array.Empty<string>();
 
                 foreach (var delimiter in newDelimiters)
                 {

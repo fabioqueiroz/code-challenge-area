@@ -8,85 +8,126 @@ namespace CodeChallengeArea
 {
     public class GenericLinkedList<T>
     {
-        private Node _head = null;
-        private List<Node> _nodeList = new();
+        public Node Head { get; private set; } = null;
+        public int Length { get; private set; } = 0;
 
-        private class Node
+        public class Node
         {
             public Node Next;
             public T Data;
-            public Node Previous;
-        }
-
-        public void AddNode(T t)
-        {
-            var newNode = new Node
-            {
-                Next = _head,
-                Data = t
-            };
-
-            _head = newNode;
-
-            //_nodeList.Add(newNode);
         }
 
         public void InsertAtStart(T t)
         {
+            var newNode = new Node
+            {
+                Next = Head,
+                Data = t
+            };
 
+            Head = newNode;
+            Length++;
         }
 
         public void InsertInTheMiddle(T t)
         {
+            var newNode = new Node()
+            {
+                Next = Head.Next,
+                Data = t
+            };
 
+            Head.Next = newNode;
+            Length++;
         }
 
         public void InsertAtTheEnd(T t)
         {
-            var newNode = new Node
+            var newNode = new Node()
             {
-                Next = _head,
+                Next = null,
                 Data = t
             };
 
-            _head = newNode;
+            Head.Next = newNode;
+            Length++;
         }
 
-        public void RemoveNode(T t)
+        public void RemoveAt(int index)
         {
-            var node = _nodeList.Find(x => x.Data.Equals(t));
-            var position = _nodeList.FindIndex(0, x => x.Data.Equals(t));
-            var previousNode = new Node();
+            CheckIndex(index);
 
-            for (int i = 0; i < _nodeList.Count; i++)
+            if (index == 0)
             {
-                if (i == position - 1)
+                Head = Head.Next;
+            }
+            else
+            {
+                Node current = Head;
+                for (int i = 0; i < index-1; i++)
                 {
-                    previousNode = _nodeList.ToArray()[i];
+                    current = current.Next;
                 }
+
+                current.Next = current.Next.Next;
             }
 
-            previousNode.Next = node.Next;
-            node.Next = null;
-            _head = previousNode;
-
-            _nodeList.Remove(node);
+            Length--;
         }
 
         public void PrintList()
         {
-            //foreach (var node in _nodeList)
-            //{
-            //    Console.WriteLine(node.Data.ToString());
-            //}
-
-            Node current = _head;
+            Node current = Head;
+            var stringList = new StringBuilder();
 
             while (current != null)
             {
-                Console.WriteLine(current.Data.ToString());
+                stringList.Append(current.Data.ToString() + " ");
                 current = current.Next;
             }
+
+            Console.WriteLine($"Result: {stringList}");
+        }
+
+        private void CheckIndex(int index)
+        {
+            if (index < 0 || index >= Length)
+            {
+                throw new ArgumentOutOfRangeException($"Index {index} out of bounds");
+            }
+        }
+
+        public T GetElement(int index)
+        {
+            CheckIndex(index);
+
+            Node current = Head;
+
+            for (int i = 0; i < index; i++)
+            {
+                current = current.Next;
+            }
+
+            return current.Data;
+        }
+
+        public int IndexOf(T t)
+        {
+            Node current = Head;
+            int index = 0;
+
+            while (current != null && !current.Data.Equals(t))
+            {
+                current = current.Next;
+                index++;
+            }
+
+            if (current == null)
+            {
+                return -1;
+            }
+
+            return index;
         }
     }
 }
