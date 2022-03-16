@@ -33,12 +33,18 @@ namespace CodeChallengeArea
 
         private static List<string> GetDelimiters(string numbers)
         {
-            var delimiters = new List<string> { "\n" };
+            var delimiters = new List<string> { "\n", "," };
             if (numbers.StartsWith("//"))
             {
                 var dynamicDelimiters = numbers.Split("//", StringSplitOptions.RemoveEmptyEntries);
                 var matches = Regex.Matches(dynamicDelimiters[0], @"[\[].*[\]]");
-                //var matches = Regex.Matches(dynamicDelimiters[0], @"[\[].*[\]]|(.).*[\\n]1");
+                
+                if (matches.Count == 0)
+                {
+                    var firstChar = dynamicDelimiters[0].Substring(0, 1);
+                    delimiters.Add(firstChar);
+                    return delimiters;
+                }
                 var newDelimiters = matches[0].ToString().Split(new string[] { "[", "]" }, StringSplitOptions.RemoveEmptyEntries);
 
                 foreach (var delimiter in newDelimiters)
