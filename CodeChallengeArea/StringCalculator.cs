@@ -43,15 +43,16 @@ namespace CodeChallengeArea
                 {
                     var firstChar = dynamicDelimiters[0].Substring(0, 1);
                     delimiters.Add(firstChar);
-                    return delimiters;
                 }
-
-                var newDelimiters = matches[0]?.ToString().Split(new string[] { "[", "]" }, StringSplitOptions.RemoveEmptyEntries) ?? Array.Empty<string>();
-
-                foreach (var delimiter in newDelimiters)
+                else
                 {
-                    delimiters.Add(delimiter);
-                }
+                    var newDelimiters = matches[0]?.ToString().Split(new string[] { "[", "]" }, StringSplitOptions.RemoveEmptyEntries) ?? Array.Empty<string>();
+
+                    foreach (var delimiter in newDelimiters)
+                    {
+                        delimiters.Add(delimiter);
+                    }
+                }               
             }
 
             return delimiters;
